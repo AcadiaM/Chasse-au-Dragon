@@ -1,0 +1,136 @@
+Ce que j'ai:
+
+Type de jeu: jeu de plateforme + jeu de tir
+
+Les fonctions phaser
+
+anchor.setTo (0.5,0.5);
+
+jeu.input.keyboard.createCursorKeys();
+
+Ce que je veux:
+
+Je veux que le dragon se déplace avec les fleches gauche et droite et vole/saute avec la flèches de haut
+Je veux que lorsque le dragon touche les archers il perd une vie
+Je veux que lorsque le dragon touche la gemme, ou perd toute ces vies que le jeu se termine
+Lorsque le jeux ce termine, dépendant si tu as gagner ou perdu, il y a du texte qui apparaitra
+
+Resolution:
+
+var jeu = new Phaser.Game(800, 600, Phaser.CANVAS, '', { preload: chargement, create: creation, update: repetition});
+var monDragon;
+var fleches;
+var jouer = false;
+var carte;
+var plateforme;
+var mesPlateformes;
+var gemme;
+var maGemme;
+var archer;
+var mesArchers;
+var archer2;
+var archer3;
+var archer4;
+var archer5;
+var archer6;
+var vies = 2;
+var viesString = '';
+var viesTexte
+var btnDirectives;
+var texteDirectives;
+var gagnerTexte;
+var perduTexte;
+
+
+function chargement(){
+
+	chargement des archers, de l'arrière plan, du dragon et de la gemme.
+
+}
+
+function creation(){
+
+	ajouter l'arrière plan, les archers, le dragon et la gemme
+	activer les physiques du jeux
+	ancrer et positioner le dragon
+	collision des barrière et le dragon sont vrai
+	la vitesse du dragon
+	ajouter un "bounce" au dragon
+	ajouter la gravité
+	activer les flèches pour le mouvement
+	ajouter le texte et le bouton de directives
+	ancrer et centrer le texte et le bouton
+	ajouter le string des vies et le textes de vies
+	former les groupe physique des platformes, archer, et la gemme,
+	ajouter les extrémité de la carte (hauteur et largeur)
+	ajouter l'array de la carte
+	ajouter la boucle de la carte
+	faire les conditions de la carte pour les plateformes, archers et gemme,
+	
+}
+
+fonction des directives
+
+}
+
+function repetition(){
+
+	collision entre le dragon et les plateformes
+       	ajouter la condition jouer (if jouer)
+	la vitesse du dragon est 0 quand les fleches ne sont pas "down"
+	si la fleches de gauche est "down" le dragon fait face à la gauche et sa vitesse x est de -200
+	si la fleches de droite est "down" le dragon fait face à la droite et sa vitesse x est de 200
+	si la fleches du haut est "down" le dragon saute/vole et sa vitesse y est de -300
+        
+        }
+
+    (fonction de perteVie();)
+    (fonction de finMatch();)
+}
+
+function arreterJeu(){
+    fonction pour arreter le jeu
+}
+
+function finMatch(){
+	si le dragon touche la gemme{
+		- la gemme va être collecter (dissparaitre)
+		- les archers vont dissparaitre
+		- le dragon va disparaitre
+		- les plateformes vont disparaitre
+		- le texte qui dit que tu gagne va apparaitre
+    }
+	si le dragon perd tout ces vies{
+		- tout va disparaitres
+		- le texte qui dit que tu as perdus va apparaitre
+
+    }
+}
+
+
+function debuter(){
+	la variable jouer est vrai
+	la visibilité du bouton directives et du texte directives est faux
+	la visibilité des plateformes, des archers et de la gemme est vrai
+}
+
+function directives(){
+	la variable jouer est vrai
+	les boutons directives et le textes sont visibles
+	la visibilité des plateformes, des archers et de la gemme est faux
+}
+
+function perteVie(){
+
+	si le dragon touche n'importe des 6 archers, il perd une vie.
+   
+}
+
+
+Validation/Testing:
+
+- Essayer moi même
+- Envoyer a des amis
+- Voir s'il y a des bugs et les changers
+- Demander de la rétroaction
+
